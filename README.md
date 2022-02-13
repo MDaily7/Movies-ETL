@@ -1,7 +1,7 @@
 # Movies-ETL
 ## Description
 This project was utilized to gain experience with the Extract, Transform, and Load (ETL) process of data analysis. The three data sets used were extracted into pandas dataframes. The 
-transformation process consisted almost entirely of data cleaning; the data cleaning strategy followed an iterative process of inspect, plan, exectute where the data was inspected for issues, a plan was developed for handling the issues, and 
+transformation process consisted almost entirely of data cleaning; the data cleaning strategy followed an iterative process of inspect, plan, execute where the data was inspected for issues, a plan was developed for handling the issues, and 
 the plan was executed to repair the issues. Each phase of the iterative process narrowed in focus beginning with broad strokes such as filtering out unneeded data (removing 
 tv shows from the movies dataframe for example) and consolidating columns with similar types of data (creating an alternative titles column for the various titles in different languages
 for example). The broad strokes eventually gave way to more refined approaches which included using regular expressions (regex) to extract particular patterns within the values in 
