@@ -31,7 +31,7 @@ then loaded into the database with .to_sql() where the name argument is used to 
 [Loading Movies](https://github.com/MDaily7/Movies-ETL/blob/main/Data/Loading_Movies.png). The ratings.csv was too large to simply load into Postgres, so it was instead loaded in chunks with a for loop as seen in [Loading ratings.csv](https://github.com/MDaily7/Movies-ETL/blob/main/Data/Loading_ratingscsv.png) with print statements 
 used to indicate the various chunks of data being loaded at any one time and the total amount of time passed per chunk loaded.
 ## Resources
-* movie_metadata.csv and ratings.csv obtained from kaggle here https://www.kaggle.com/rounakbanik/the-movies-dataset/download   (requires an account)
+* movie_metadata.csv and ratings.csv obtained from kaggle here https://www.kaggle.com/rounakbanik/the-movies-dataset/download   
 * [Data](https://github.com/MDaily7/Movies-ETL/tree/main/Data) contains relevant csvs and images
 * Anaconda 4.11.0
 * Python 3.7.11
