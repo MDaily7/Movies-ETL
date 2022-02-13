@@ -19,7 +19,7 @@ where four patterns seen as the release date forms are entered into the extract 
 from the dataframe.
 * kaggle_metadata_df: Bad data was isolated and then dropped from the dataframe by filtering it on the 'adult' column and dropping any data where 'adult' did not equal 'False'; the 'adult' column was subsequently dropped.
 Next, the data types of various columns were converted to more appropriate types. The 'budget' column was converted to integer with .astype(int) for example. 
-* creating and cleaning the movies dataframe: the movies dataframe was created with an inner merge betweent the wiki_movies_df and the kaggle_metadata_df. Duplicate columns were
+* creating and cleaning the movies dataframe: the movies dataframe was created with an inner merge between the wiki_movies_df and the kaggle_metadata_df. Duplicate columns were
 inspected, a plan was created for which columns to keep, and the plan was executed where several wiki columns were dropped and a function was used to fill missing kaggle data 
 with wiki data within the merged dataframe. Finally, the columns were reorderd (and the 'video' column was filtered out) before being renamed to maintain consistency.
 * ratings_df: the ratings_df was determined to be fairly clean to begin with, but was too large to merge. Therefore, the data was summarized by grouping the data on 'movieId' and 'rating', counting the ratings, renaming the 'userId' column to 'count' and 
