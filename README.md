@@ -14,7 +14,7 @@ columns. Once the data was cleaned to reasonable standards, the cleaned datafram
 * wiki_movies_df: list comprehension was used to keep only movies with imdb_links and directors. A clean movies function was created to consolidate alternate titles into one column
 and to change the column names of the dataframe to maintain consistent formatting. Regular expressions were used to extract imdb ids from the imdb_link column and duplicate ids were dropped.
 List comprehension was used again to create a list of columns that were less than 90% null and the dataframe was then updated to contain only columns from that list. Finally, various columns were cleaned in the iterative
-fashion described above where regexs were used to extract particular patterns of values within the columns with .str.extract(). [Extract Example]() provides an example of this
+fashion described above where regexs were used to extract particular patterns of values within the columns with .str.extract(). [Extract Example](https://github.com/MDaily7/Movies-ETL/blob/main/Data/StringExtractExample.PNG) provides an example of this
 where four patterns seen as the release date forms are entered into the extract method. The data extracted was saved into a new columns and the columns it was extracted from were dropped
 from the dataframe.
 * kaggle_metadata_df: Bad data was isolated and then dropped from the dataframe by filtering it on the 'adult' column and dropping any data where 'adult' did not equal 'False'; the 'adult' column was subsequently dropped.
@@ -28,15 +28,15 @@ merged with the movies_df dataframe to create the movies_with_ratings_df datafra
 ### Load
 The sqlalchemy module was used to import the data into Postgres. The engine was created using create_engine() with the appropriate database string provided. The movies_with_ratings_df was 
 then loaded into the database with .to_sql() where the name argument is used to specify the name of the table in Postgres and the engine is used for the connection as seen in
-[Loading Movies](). The ratings.csv was too large to simply load into Postgres, so it was instead loaded in chunks with a for loop as seen in [Loading ratings.csv]() with print statements 
+[Loading Movies](https://github.com/MDaily7/Movies-ETL/blob/main/Data/Loading_Movies.png). The ratings.csv was too large to simply load into Postgres, so it was instead loaded in chunks with a for loop as seen in [Loading ratings.csv](https://github.com/MDaily7/Movies-ETL/blob/main/Data/Loading_ratingscsv.png) with print statements 
 used to indicate the various chunks of data being loaded at any one time and the total amount of time passed per chunk loaded.
 ## Resources
-* movie_metadata.csv and ratings.csv obtained from kaggle here ()   (requires an account)
-* [Data]() contains relevant csvs and images
+* movie_metadata.csv and ratings.csv obtained from kaggle here https://www.kaggle.com/rounakbanik/the-movies-dataset/download   (requires an account)
+* [Data](https://github.com/MDaily7/Movies-ETL/tree/main/Data) contains relevant csvs and images
 * Anaconda 4.11.0
 * Python 3.7.11
-* [Data_import_explore]() is the jupyter notebook containing the ETL process described above.
-* [ETL_create_database]() is the jupyter notebook containing the refactored ETL process.
+* [Data_import_explore](https://github.com/MDaily7/Movies-ETL/blob/main/Data_import_explore.ipynb) is the jupyter notebook containing the ETL process described above.
+* [ETL_create_database](https://github.com/MDaily7/Movies-ETL/blob/main/ETL_create_database.ipynb) is the jupyter notebook containing the refactored ETL process.
 
 
 
